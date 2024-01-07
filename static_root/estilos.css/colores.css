@@ -1,0 +1,169 @@
+:root{
+--segundo-color: #191970;
+--segundo-color: #FFD700;
+--tercer-color:#800020;
+}
+
+#id-1 {
+color: var(--segundo-color)
+}
+#id-2 {
+color: var(--tercer-color);
+}
+
+
+.imagen{
+border-radius: 100px;
+position: absolute;
+background-image: url(../multimedia/un\ gato\ negro_\ \ 1.png);
+background-color: black;
+background-size: contain;
+width: 200px;
+height: 200px;
+translate: 100px 100px; 
+animation: enfoque 5s infinite alternate;
+border-radius: (40deg)
+;}
+#foto{
+position: absolute;
+background-image: url("../multimedia/luis2.png")
+;
+
+width: 300px;
+height: 500px;
+
+filter: brightness(0.1) ;
+transform: scale(1.4);
+border-bottom-left-radius: 50%;
+border-top-left-radius: 200%;
+}
+
+
+
+
+@keyframes enfoque{
+0%{
+clip-path: circle(50% at 50% 50%);
+}
+
+25%{
+clip-path: circle(50% at 19% 32%);
+}
+
+50%{clip-path: circle(50% at 80% 32%);}
+
+60%{clip-path: circle(50% at 50% 74%);}
+
+80%{clip-path: circle(50% at 78% 76%);}
+
+100%{clip-path: circle(50% at 50% 50%);}
+
+}
+
+
+body{
+background-color:rgb(15, 13, 13);
+background-color:rgb(0, 0, 0);
+color:#ffffff;/* color */
+font-family: 'Tillana', cursive;
+overflow-x: hidden;
+width: 100%;
+}
+
+
+.image_2{
+
+background-image: url(../multimedia/frame1.png);
+background-size: contain;
+width: 500px;
+height: 500px;
+margin: auto;
+margin-top: 100px;
+transform: scale(1.4);
+animation: frames 3.5s infinite ;
+filter:saturate(3);
+}
+
+@keyframes frames {
+  0% { background-image: url(../multimedia/frame1.png); }
+  2.857% { background-image: url(../multimedia/frame2.png); }
+  5.714% { background-image: url(../multimedia/frame3.png); }
+  8.571% { background-image: url(../multimedia/frame4.png); }
+  11.429% { background-image: url(../multimedia/frame5.png); }
+  14.286% { background-image: url(../multimedia/frame6.png); }
+  17.143% { background-image: url(../multimedia/frame7.png); }
+  20% { background-image: url(../multimedia/frame8.png); }
+  22.857% { background-image: url(../multimedia/frame9.png); }
+  25.714% { background-image: url(../multimedia/frame10.png); }
+  28.571% { background-image: url(../Multimedia/frame11.png); }
+  31.429% { background-image: url(../multimedia/frame12.png); }
+  34.286% { background-image: url(../multimedia/frame13.png); }
+  37.143% { background-image: url(../multimedia/frame14.png); }
+  40% { background-image: url(../multimedia/frame15.png); }
+  42.857% { background-image: url(../multimedia/frame16.png); }
+  45.714% { background-image: url(../multimedia/frame17.png); }
+  48.571% { background-image: url(../multimedia/frame18.png); }
+  51.429% { background-image: url(../multimedia/frame19.png); }
+  54.286% { background-image: url(../multimedia/frame20.png); }
+  57.143% { background-image: url(../multimedia/frame21.png); }
+  60% { background-image: url(../multimedia/frame22.png); }
+  62.857% { background-image: url(../multimedia/frame23.png); }
+  65.714% { background-image: url(../multimedia/frame24.png); }
+  68.571% { background-image: url(../multimedia/frame25.png); }
+  71.429% { background-image: url(../multimedia/frame26.png); }
+  74.286% { background-image: url(../multimedia/frame27.png); }
+  77.143% { background-image: url(../multimedia/frame28.png); }
+  80% { background-image: url(../multimedia/frame29.png); }
+  82.857% { background-image: url(../multimedia/frame30.png); }
+  85.714% { background-image: url(../multimedia/frame31.png); }
+  88.571% { background-image: url(../multimedia/frame32.png); }
+  91.429% { background-image: url(../multimedia/frame33.png); }
+  94.286% { background-image: url(../multimedia/frame34.png); }
+  97.143% { background-image: url(../multimedia/frame35.png); }
+  100% { background-image: url(../multimedia/frame36.png); }
+}
+
+
+
+
+.contacto>i{
+font-size: 100px;
+justify-content: center;
+}
+
+#btnCopiar{
+  border-color: none;
+  cursor: pointer;
+  font-size: 15px;
+  border: none;
+  height: 20px;
+  background-color: rgb(0, 0, 0);
+  color:rgb(255, 255, 255);
+}
+
+
+#btnCopiar:hover{
+
+  color:var(--tercer-color);
+}
+
+#cv{
+width: 100px;
+height: 100px;
+}
+.contain_CV{
+width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.sony{
+  display: flex;
+ margin: auto;
+  width: 30%;
+}
+
+
+
+

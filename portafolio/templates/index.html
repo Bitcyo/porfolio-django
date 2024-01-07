@@ -1,0 +1,323 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="Luis Sanchez">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luis Sanchez J. Perfil profesional </title>
+<link rel="shortcut icon" href="static/multimedia/un_gato_negro___1-removebg-preview.png">
+<link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+<link rel="stylesheet" type="text/css" href="static/estilos.css/colores.css">
+<link rel="stylesheet" type="text/css" href="static/estilos.css/encuadre.css">
+<link rel="stylesheet" type="text/css" href="static/estilos.css/responsive.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tillana:wght@500&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/414de48fdc.js" crossorigin="anonymous"></script>
+
+
+
+</head>
+<header>
+  <div class="marco">
+    <div class="marcos" id="marco-1"></div>
+    <div class="marcos" id="marco-2"></div>
+    <div class="imagen"></div>
+    <div id="foto"></div>
+  </div>
+  <div class="titulo">
+    <nav class="horizontal-menu">
+      <ul class="menu-list">
+        <li><a href="#inicio">Sobre mi</a></li>
+        <li><a href="#cuadros">Skills</a></li>
+        <li><a href="#experiencias">Experiencia</a></li>
+        <li><a href="#contactos">Contacto</a></li>
+      </ul>
+    </nav>
+      <h1  id="id-1">Luis Sanchez J.</h1>
+      <h2 id="id-2">Aspirante a especialista de CiberSeguridad</h2>
+      <div class="contactos2" >
+<!--        <button class="contacto2 ig2"><i class="fa-brands fa-instagram"></i></button>-->
+        <button class="contacto2 wsp2"><i class="fa-brands fa-whatsapp"></i></button>
+        <button class="contacto2 mail2"><i class="fa fa-envelope"></i></button>
+        <button class="contacto2 linkend2"><i class="fa-brands fa-linkedin"></i></button>
+        <button class="contacto2 github2"><i class="fa-brands fa-github"></i></button>
+      </div>
+  
+    </div>
+  </div>
+</header>
+
+<body >
+
+<nav class="Menu">
+<h1>@luis Sanchez:</h1><h3>by~Bitcyo<h3>
+
+  
+  <ul>
+    <div class="Menu_li">
+      <li><a href="#inicio"><i class="fa-solid fa-user"></i>Sobre mí</a></li>
+    </div>
+    <div class="Menu_li">
+      <li><a href="#cuadros"><i class="fa-solid fa-check-to-slot"></i>Habilidades</a></li>
+    </div>
+    <!-- <div class="Menu_li"><li><i class="fa-solid fa-rocket"></i><a href="proyectos.html">Proyectos</a></li></div> -->
+    <div class="Menu_li">
+      <li></i><a href="#experiencias"><i class="fa-solid fa-trophy"></i>Experiencia</a></li>
+    </div>
+    <div class="Menu_li">
+      <li><a href="#contactos"><i class="fa-solid fa-address-book"></i>Contacto</a></li>
+    </div>
+  </ul>
+<div class="retrato">                       
+  <div class="dezliz" id="js"></div>
+</div>
+</nav>
+
+  <script>
+    // Verificar si se cumple la condición del media query
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      // Crear el elemento nav
+      var navMobile = document.createElement("nav");
+      navMobile.className = "mobile";
+
+      // Crear la lista ul
+      var ul = document.createElement("ul");
+
+      // Agregar los elementos li y a dentro de la lista ul
+      var li1 = document.createElement("li");
+      var a1 = document.createElement("a");
+      a1.href = "#inicio";
+      var i1 = document.createElement("i");
+      i1.className = "fa-solid fa-user";
+      a1.appendChild(i1);
+      li1.appendChild(a1);
+      ul.appendChild(li1);
+
+      var li2 = document.createElement("li");
+      var a2 = document.createElement("a");
+      a2.href = "#cuadros";
+      var i2 = document.createElement("i");
+      i2.className = "fa-solid fa-check-to-slot";
+      a2.appendChild(i2);
+      li2.appendChild(a2);
+      ul.appendChild(li2);
+
+      var li3 = document.createElement("li");
+      var a3 = document.createElement("a");
+      a3.href = "#experiencias";
+      var i3 = document.createElement("i");
+      i3.className = "fa-solid fa-trophy";
+      a3.appendChild(i3);
+      li3.appendChild(a3);
+      ul.appendChild(li3);
+
+      var li4 = document.createElement("li");
+      var a4 = document.createElement("a");
+      a4.href = "#contactos";
+      var i4 = document.createElement("i");
+      i4.className = "fa-solid fa-address-book";
+      a4.appendChild(i4);
+      li4.appendChild(a4);
+      ul.appendChild(li4);
+
+      // Agregar la lista ul al elemento nav
+      navMobile.appendChild(ul);
+
+      // Insertar el elemento nav en el documento
+      document.body.appendChild(navMobile);
+    }
+  </script>
+
+
+
+<main id="inicio">
+
+<h2 class="indice">¿Quién soy?</h2>
+  
+{% for section in presentations_sections %}
+  <h2 class="indice presentacion">{{ section.title }}</h2>
+  <div class="contenido presentacion">
+    <p>{{ section.content }}</p>
+  </div>
+{% endfor %}
+
+
+
+
+<div id="cuadros">
+    <h2 class="indice">Mis Habilidades</h2>
+    <div class="grafico-2"></div>
+    <div class="contenedor">
+        {% for skill in skills %}
+           <div class="cuadro" style="background-image: url('{{ skill.image.url }}'); " ,style="{% if skill.image_width %}width: {{ skill.image_width }}px;{% endif %}">
+                <div class="overlay">
+                    <h3>{{ skill.name }}</h3>
+                </div>
+            </div>
+        {% endfor %}
+
+        <h3 class="sub_indice">Intereses</h3>
+
+        {% for interest in interests %}
+            <div class="cuadro" style="background-image: url('{{ interest.image.url }}');" ,style="{% if skill.image_width %}width: {{ skill.image_width }}px;{% endif %}">
+                <div class="overlay">
+                    <h3>{{ interest.name }}</h3>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+ 
+
+              
+                              
+<div class="divs">
+      <h3 class="sub_indice">soft skills</h3> 
+  <div class="grafico">
+  <div class="skills">
+    <div class="skill-name">Trabajo en equipo</div>
+    <div class="progress-bar">
+      <div class="progress" style="width: 80%;"> <div class="progress2"></div> </div>
+    </div>
+    <div class="skill-value">80%</div>
+  </div>
+  <div class="skills">
+    <div class="skill-name">Activo</div>
+    <div class="progress-bar">
+      <div class="progress" style="width: 90%;">  <div class="progress2"></div>  </div>
+    </div>
+    <div class="skill-value">90%</div>
+  </div>
+  <div class="skills">
+    <div class="skill-name">Comunicación</div>
+    <div class="progress-bar">
+      <div class="progress" style="width: 100%;"> <div class="progress2"></div></div>
+    </div>
+    <div class="skill-value">100%</div>
+  </div>
+  <div class="skills">
+    <div class="skill-name">Resolución de problemas</div>
+    <div class="progress-bar">
+      <div class="progress" style="width: 84%;">  <div class="progress2"></div> </div>
+    </div>
+    <div class="skill-value">84%</div>
+  </div>
+  <div class="skills">
+    <div class="skill-name">Adaptabilidad</div>
+    <div class="progress-bar">
+      <div class="progress" style="width: 100%;"> <div class="progress2"></div> </div>
+    </div>
+    <div class="skill-value">100%</div>
+  </div>
+</div>
+</div>
+
+
+        
+<!--                <div class="indice softs"><h2>proyectos</h2></div>
+<div>
+
+
+LANZAMEEE tu gaaaaa
+
+
+
+</div>-->
+
+<div class="divs">
+                <h2 class="indice">Experiencia</h2>
+<div class="image_2" id="experiencias">
+</div> <!--animation-->
+
+</div>
+ 
+<div class="divs">
+                 <h2 class="indice" id="contactos"> Contacto </h2>
+<div class="contactos">
+<!--        <button class="contacto ig"><i class="fa-brands fa-instagram"></i>Instagram</button> -->
+        <button class="contacto wsp"><i class="fa-brands fa-whatsapp"></i>Whatsapp</button>
+        <button class="contacto linkend"><i class="fa-brands fa-linkedin"></i>Linked-in</button>
+        <button class="contacto github"><i class="fa-brands fa-github"></i>GitHub</button>
+       <button class="contacto mail"><i class="fa fa-envelope"></i>E-mail</button>
+        <span class="contacto"id="btnCopiarContainer"></span>
+
+
+<div class="contain_CV">
+    <a href="{{ MEDIA_URL }}{{ file_name }}" download="{{ file_name }}">
+        <img src="{% static 'multimedia/curriculum-vitae.png' %}" alt="Icono" class="contacto" id="cv">
+        Descargar CV
+    </a>
+</div>
+
+
+
+<img class="sony" src="{% static 'multimedia/top_5_razones_para_vpmtratarme__3_-removebg-preview.png' %}">
+
+
+</div>
+  
+
+<!-- <div class="form-container">
+      <h2 class="indice">Formulario de contacto</h2>
+      <form>
+          <div class="form-group" >
+              <label for="nombre">Nombre:</label>
+              <input type="text" id="nombre" name="nombre" required>
+          </div>
+          <div class="form-group" >
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group"> 
+              <label for="mensaje">Mensaje:</label>
+              <input type="text" name="mensaje" id="mensaje">
+          </div>
+          <input type="submit" id="enviar" value="enviar mensaje">
+          <div class="resultado"></div>
+      </form>
+    </div>
+  </div>
+</div>--> 
+
+
+</main>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__content">
+      <div class="footer__logo">
+        <img src="static/multimedia/HZ (4).png" alt="Logo">
+      </div>
+      <nav class="footer__menu">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#cuadros">Habilidades</a></li>
+          <li><a href="#experiencias">Experiencia</a></li>
+          <li><a href="#contactos">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="footer__social">
+        <a href="https://wa.me/51955335798" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://github.com/Bitcyo" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/luis-angel-s%C3%A1nchez-j-46b914254/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:luchite05@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2023 Luis Angel SJ . Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+
+
+<script src="static/code.js"></script>
+</body>
+
+
+
+</html>
